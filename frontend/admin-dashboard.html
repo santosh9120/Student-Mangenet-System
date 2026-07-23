@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Admin Dashboard | Student Management System</title>
+
+<link rel="stylesheet" href="css/admin-dashboard.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<!-- ================= Sidebar ================= -->
+
+<aside class="sidebar">
+
+<div class="logo">
+
+<i class="fas fa-user-shield"></i>
+
+<h2>SMS Admin</h2>
+
+</div>
+
+<ul>
+
+<li class="active">
+<a href="admin-dashboard.html">
+<i class="fas fa-gauge"></i>
+<span>Dashboard</span>
+</a>
+</li>
+
+<li>
+<a href="students.html">
+<i class="fas fa-user-graduate"></i>
+<span>Students</span>
+</a>
+</li>
+
+<li>
+<a href="teachers.html">
+<i class="fas fa-chalkboard-user"></i>
+<span>Teachers</span>
+</a>
+</li>
+
+<li>
+<a href="departments.html">
+<i class="fas fa-building"></i>
+<span>Departments</span>
+</a>
+</li>
+
+<li>
+<a href="courses.html">
+<i class="fas fa-book-open"></i>
+<span>Courses</span>
+</a>
+</li>
+
+<li>
+<a href="attendance.html">
+<i class="fas fa-calendar-check"></i>
+<span>Attendance</span>
+</a>
+</li>
+
+<li>
+<a href="results.html">
+<i class="fas fa-chart-line"></i>
+<span>Results</span>
+</a>
+</li>
+
+<li>
+<a href="notices.html">
+<i class="fas fa-bullhorn"></i>
+<span>Notices</span>
+</a>
+</li>
+
+<li>
+<a href="settings.html">
+<i class="fas fa-gear"></i>
+<span>Settings</span>
+</a>
+</li>
+
+<li>
+<a href="admin-login.html" id="logout">
+<i class="fas fa-right-from-bracket"></i>
+<span>Logout</span>
+</a>
+</li>
+
+</ul>
+
+</aside>
+
+<!-- ================= Main ================= -->
+
+<main class="main">
+
+<!-- ================= Topbar ================= -->
+
+<header class="topbar">
+
+<button id="menuBtn">
+
+<i class="fas fa-bars"></i>
+
+</button>
+
+<h2>Admin Dashboard</h2>
+
+<div class="top-right">
+
+<input
+type="text"
+id="search"
+placeholder="Search Student...">
+
+<button id="themeBtn">
+
+<i class="fas fa-moon"></i>
+
+</button>
+
+<div class="notification">
+
+<i class="fas fa-bell"></i>
+
+<span>6</span>
+
+</div>
+
+<div id="clock"></div>
+
+</div>
+
+</header>
+
+<!-- ================= Cards ================= -->
+
+<section class="cards">
+
+<div class="card">
+
+<i class="fas fa-user-graduate"></i>
+
+<h3>Total Students</h3>
+
+<h1 id="studentsCount">0</h1>
+
+</div>
+
+<div class="card">
+
+<i class="fas fa-chalkboard-user"></i>
+
+<h3>Total Teachers</h3>
+
+<h1 id="teachersCount">0</h1>
+
+</div>
+
+<div class="card">
+
+<i class="fas fa-building"></i>
+
+<h3>Departments</h3>
+
+<h1 id="departmentCount">0</h1>
+
+</div>
+
+<div class="card">
+
+<i class="fas fa-book-open"></i>
+
+<h3>Courses</h3>
+
+<h1 id="courseCount">0</h1>
+
+</div>
+
+</section>
+
+<!-- ================= Charts ================= -->
+
+<section class="chart-section">
+
+<div class="chart-box">
+
+<h2>Student Statistics</h2>
+
+<canvas id="studentChart"></canvas>
+
+</div>
+
+<div class="chart-box">
+
+<h2>Attendance Report</h2>
+
+<canvas id="attendanceChart"></canvas>
+
+</div>
+
+</section>
+
+<!-- ================= Recent Students ================= -->
+
+<section class="table-section">
+
+<div class="table-header">
+
+<h2>Recent Students</h2>
+
+<a href="students.html">
+
+View All
+
+</a>
+
+</div>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>ID</th>
+
+<th>Name</th>
+
+<th>Department</th>
+
+<th>Email</th>
+
+<th>Status</th>
+
+</tr>
+
+</thead>
+
+<tbody id="studentTable">
+
+<tr>
+
+<td>1</td>
+
+<td>Santosh</td>
+
+<td>Computer Engineering</td>
+
+<td>santosh@example.com</td>
+
+<td>
+
+<span class="active-status">
+
+Active
+
+</span>
+
+</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</section>
+
+<!-- ================= Quick Actions ================= -->
+
+<section class="quick-actions">
+
+<h2>Quick Actions</h2>
+
+<div class="action-grid">
+
+<a href="students.html" class="action-card">
+
+<i class="fas fa-user-plus"></i>
+
+<p>Add Student</p>
+
+</a>
+
+<a href="attendance.html" class="action-card">
+
+<i class="fas fa-calendar-plus"></i>
+
+<p>Attendance</p>
+
+</a>
+
+<a href="results.html" class="action-card">
+
+<i class="fas fa-square-poll-vertical"></i>
+
+<p>Results</p>
+
+</a>
+
+<a href="notices.html" class="action-card">
+
+<i class="fas fa-bullhorn"></i>
+
+<p>Add Notice</p>
+
+</a>
+
+</div>
+
+</section>
+
+</main>
+
+</div>
+
+<script src="/js/admin-dashboard.js"></script>
+
+</body>
+
+</html>

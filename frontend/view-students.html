@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>View Students | Student Management System</title>
+
+    <link rel="stylesheet" href="css/view-students.css">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- Sidebar -->
+
+    <div class="sidebar">
+
+        <div class="logo">
+            <i class="fas fa-user-shield"></i>
+            <h2>Admin</h2>
+        </div>
+
+        <ul>
+
+            <li>
+                <a href="admin-dashboard.html">
+                    <i class="fas fa-house"></i>
+                    Dashboard
+                </a>
+            </li>
+
+            <li>
+                <a href="add-student.html">
+                    <i class="fas fa-user-plus"></i>
+                    Add Student
+                </a>
+            </li>
+
+            <li class="active">
+                <a href="view-students.html">
+                    <i class="fas fa-users"></i>
+                    View Students
+                </a>
+            </li>
+
+            <li>
+                <a href="courses.html">
+                    <i class="fas fa-book"></i>
+                    Courses
+                </a>
+            </li>
+
+            <li>
+                <a href="departments.html">
+                    <i class="fas fa-building"></i>
+                    Departments
+                </a>
+            </li>
+
+            <li>
+                <a href="reports.html">
+                    <i class="fas fa-chart-bar"></i>
+                    Reports
+                </a>
+            </li>
+
+            <li>
+                <a href="index.html">
+                    <i class="fas fa-right-from-bracket"></i>
+                    Logout
+                </a>
+            </li>
+
+        </ul>
+
+    </div>
+
+    <!-- Main -->
+
+    <div class="main">
+
+        <div class="topbar">
+
+            <h1>Student Management</h1>
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search Student..."
+                onkeyup="searchStudent()">
+
+        </div>
+
+        <div class="table-box">
+
+            <table id="studentTable">
+
+                <thead>
+
+                    <tr>
+
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Roll No</th>
+                        <th>Department</th>
+                        <th>Year</th>
+                        <th>Email</th>
+                        <th>Mobile</th>
+                        <th>Action</th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    <tr>
+
+                        <td>1</td>
+                        <td>Santosh</td>
+                        <td>CE101</td>
+                        <td>Computer Engineering</td>
+                        <td>Third Year</td>
+                        <td>santosh@gmail.com</td>
+                        <td>9876543210</td>
+
+                        <td>
+
+                            <button class="edit-btn">
+                                <i class="fas fa-pen"></i>
+                            </button>
+
+                            <button class="delete-btn">
+                                <i class="fas fa-trash"></i>
+                            </button>
+
+                        </td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>2</td>
+                        <td>Rahul</td>
+                        <td>IT205</td>
+                        <td>Information Technology</td>
+                        <td>Second Year</td>
+                        <td>rahul@gmail.com</td>
+                        <td>9876543211</td>
+
+                        <td>
+
+                            <button class="edit-btn">
+                                <i class="fas fa-pen"></i>
+                            </button>
+
+                            <button class="delete-btn">
+                                <i class="fas fa-trash"></i>
+                            </button>
+
+                        </td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>3</td>
+                        <td>Priya</td>
+                        <td>ME301</td>
+                        <td>Mechanical</td>
+                        <td>Final Year</td>
+                        <td>priya@gmail.com</td>
+                        <td>9876543212</td>
+
+                        <td>
+
+                            <button class="edit-btn">
+                                <i class="fas fa-pen"></i>
+                            </button>
+
+                            <button class="delete-btn">
+                                <i class="fas fa-trash"></i>
+                            </button>
+
+                        </td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="js/view-students.js"></script>
+
+</body>
+
+</html>

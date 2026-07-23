@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Student Management System</title>
+
+<link rel="stylesheet" href="css/dashboard.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<!-- Sidebar -->
+
+<aside class="sidebar">
+
+<div class="logo">
+
+<i class="fas fa-user-graduate"></i>
+
+<h2>Student Portal</h2>
+
+</div>
+
+<ul>
+
+<li class="active">
+
+<a href="student-dashboard.html" onclick="showSection('dashboard')">
+
+<i class="fas fa-house"></i>
+
+<span>Dashboard</span>
+
+</a>
+
+</li>
+
+<li>
+
+<a href="student-profile.html" onclick="showSection('profile')">
+
+<i class="fas fa-user"></i>
+
+<span>My Profile</span>
+
+</a>
+
+</li>
+
+<li>
+
+<a href="student-attendance.html" onclick="showSection('attendance')">
+
+<i class="fas fa-calendar-check"></i>
+
+<span>Attendance</span>
+
+</a>
+
+</li>
+
+<li>
+
+<a href="results.html" onclick="showSection('results')">
+
+<i class="fas fa-chart-line"></i>
+
+<span>Results</span>
+
+</a>
+
+</li>
+
+<li>
+
+<a href="student-departments.html" onclick="showSection('departments')">
+
+<i class="fas fa-building"></i>
+
+<span>Departments</span>
+
+</a>
+
+</li>
+
+<li>
+
+<a href="student-notifications.html" onclick="showSection('notifications')">
+
+<i class="fas fa-bell"></i>
+
+<span>Notifications</span>
+
+</a>
+
+</li>
+
+<li>
+
+<a href="student-settings.html" onclick="showSection('settings')">
+
+<i class="fas fa-gear"></i>
+
+<span>Settings</span>
+
+</a>
+
+</li>
+
+<li>
+
+<a href="student-logout.html" id="logout">
+
+<i class="fas fa-right-from-bracket"></i>
+
+<span>Logout</span>
+
+</a>
+
+</li>
+
+</ul>
+
+</aside>
+
+<!-- Main -->
+
+<main class="main">
+
+<!-- Top Bar -->
+
+<header class="topbar">
+
+<h1>Student Management System</h1>
+
+<div class="top-actions">
+
+<input type="text"
+placeholder="Search...">
+
+<button id="themeBtn">
+
+🌙
+
+</button>
+
+<div id="clock"></div>
+
+</div>
+
+</header>
+
+<!-- ================= DASHBOARD ================= -->
+
+<section id="dashboard" class="page activePage">
+
+<div class="welcome">
+
+<h2>
+
+Welcome,
+
+<span id="studentName">
+
+Student
+
+</span>
+
+</h2>
+
+<p>
+
+Have a productive day.
+
+</p>
+
+</div>
+
+<div class="cards">
+
+<div class="card">
+
+<i class="fas fa-user"></i>
+
+<h3>Total Subjects</h3>
+
+<h1>6</h1>
+
+</div>
+
+<div class="card">
+
+<i class="fas fa-calendar-check"></i>
+
+<h3>Attendance</h3>
+
+<h1>92%</h1>
+
+</div>
+
+<div class="card">
+
+<i class="fas fa-chart-line"></i>
+
+<h3>CGPA</h3>
+
+<h1>8.75</h1>
+
+</div>
+
+<div class="card">
+
+<i class="fas fa-bell"></i>
+
+<h3>Notifications</h3>
+
+<h1>5</h1>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= PROFILE ================= -->
+
+<section id="profile" class="page">
+
+<h2>My Profile</h2>
+
+<p>Profile section will be added in Part 2.</p>
+
+</section>
+
+<!-- ================= ATTENDANCE ================= -->
+
+<section id="attendance" class="page">
+
+<h2>Attendance</h2>
+
+<p>Attendance section will be added in Part 2.</p>
+
+</section>
+
+<!-- ================= RESULTS ================= -->
+
+<section id="results" class="page">
+
+<h2>Results</h2>
+
+<p>Results section will be added in Part 3.</p>
+
+</section>
+
+<!-- ================= DEPARTMENTS ================= -->
+
+<section id="departments" class="page">
+
+<h2>Departments</h2>
+
+<p>Departments section will be added in Part 3.</p>
+
+</section>
+
+<!-- ================= NOTIFICATIONS ================= -->
+
+<section id="notifications" class="page">
+
+<h2>Notifications</h2>
+
+<p>Notifications section will be added in Part 4.</p>
+
+</section>
+
+<!-- ================= SETTINGS ================= -->
+
+<section id="settings" class="page">
+
+<h2>Settings</h2>
+
+<p>Settings section will be added in Part 4.</p>
+
+</section>
+
+</main>
+
+</div>
+
+<script src="/js/dashboard.js"></script>
+
+</body>
+
+</html>

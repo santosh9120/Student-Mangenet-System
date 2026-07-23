@@ -1,0 +1,374 @@
+/* ==========================================
+   Student Registration Page CSS
+========================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#0f172a,#1e3a8a,#2563eb);
+    overflow-x:hidden;
+}
+
+/* Background Animation */
+
+body::before{
+    content:"";
+    position:fixed;
+    width:600px;
+    height:600px;
+    background:rgba(255,255,255,.08);
+    border-radius:50%;
+    top:-250px;
+    left:-250px;
+}
+
+body::after{
+    content:"";
+    position:fixed;
+    width:500px;
+    height:500px;
+    background:rgba(255,255,255,.06);
+    border-radius:50%;
+    bottom:-200px;
+    right:-200px;
+}
+
+/* Container */
+
+.register-container{
+    width:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:40px 20px;
+    position:relative;
+    z-index:10;
+}
+
+/* Card */
+
+.register-card{
+
+    width:480px;
+    background:rgba(255,255,255,.12);
+
+    backdrop-filter:blur(20px);
+
+    border:1px solid rgba(255,255,255,.2);
+
+    border-radius:25px;
+
+    padding:40px;
+
+    color:white;
+
+    box-shadow:0 20px 50px rgba(0,0,0,.35);
+
+    animation:fadeIn .7s ease;
+
+}
+
+@keyframes fadeIn{
+
+from{
+
+opacity:0;
+transform:translateY(40px);
+
+}
+
+to{
+
+opacity:1;
+transform:translateY(0);
+
+}
+
+}
+
+/* Header */
+
+.register-header{
+
+text-align:center;
+margin-bottom:30px;
+
+}
+
+.register-header i{
+
+font-size:65px;
+color:#FFD54F;
+margin-bottom:15px;
+
+}
+
+.register-header h2{
+
+font-size:32px;
+font-weight:700;
+margin-bottom:10px;
+
+}
+
+.register-header p{
+
+color:#ddd;
+font-size:15px;
+
+}
+
+/* Input */
+
+.input-box{
+
+display:flex;
+align-items:center;
+
+background:rgba(255,255,255,.15);
+
+border:1px solid rgba(255,255,255,.15);
+
+border-radius:12px;
+
+padding:14px 16px;
+
+margin-bottom:18px;
+
+transition:.3s;
+
+}
+
+.input-box:hover{
+
+background:rgba(255,255,255,.20);
+
+}
+
+.input-box:focus-within{
+
+border-color:#FFD54F;
+
+box-shadow:0 0 10px rgba(255,213,79,.4);
+
+}
+
+.input-box i{
+
+font-size:18px;
+
+width:30px;
+
+color:#FFD54F;
+
+}
+
+.input-box input,
+.input-box select{
+
+width:100%;
+
+border:none;
+
+outline:none;
+
+background:transparent;
+
+font-size:15px;
+
+color:white;
+
+padding-left:5px;
+
+}
+
+.input-box input::placeholder{
+
+color:#ddd;
+
+}
+
+.input-box select{
+
+cursor:pointer;
+
+appearance:none;
+
+}
+
+.input-box select option{
+
+background:#1e3a8a;
+
+color:white;
+
+}
+
+/* Button */
+
+.login-btn2{
+
+width:100%;
+
+padding:15px;
+
+margin-top:10px;
+
+border:none;
+
+border-radius:12px;
+
+background:#FFD54F;
+
+color:#111827;
+
+font-size:17px;
+
+font-weight:700;
+
+cursor:pointer;
+
+transition:.35s;
+
+}
+
+.login-btn2:hover{
+
+background:#FFC107;
+
+transform:translateY(-3px);
+
+box-shadow:0 10px 20px rgba(0,0,0,.25);
+
+}
+
+/* Links */
+
+.register-link{
+
+text-align:center;
+
+margin-top:25px;
+
+}
+
+.register-link p{
+
+color:#ddd;
+
+font-size:15px;
+
+}
+
+.register-link a{
+
+color:#FFD54F;
+
+font-weight:600;
+
+text-decoration:none;
+
+}
+
+.register-link a:hover{
+
+text-decoration:underline;
+
+}
+
+.back-home{
+
+margin-top:18px;
+
+text-align:center;
+
+}
+
+.back-home a{
+
+color:white;
+
+text-decoration:none;
+
+font-weight:500;
+
+transition:.3s;
+
+}
+
+.back-home a:hover{
+
+color:#FFD54F;
+
+}
+
+/* Responsive */
+
+@media(max-width:600px){
+
+.register-card{
+
+width:100%;
+
+padding:30px 25px;
+
+}
+
+.register-header h2{
+
+font-size:26px;
+
+}
+
+.register-header i{
+
+font-size:55px;
+
+}
+
+.input-box{
+
+padding:12px;
+
+}
+
+.login-btn2{
+
+font-size:16px;
+
+}
+
+}
+
+@media(max-width:400px){
+
+.register-card{
+
+padding:25px 18px;
+
+}
+
+.register-header h2{
+
+font-size:22px;
+
+}
+
+.input-box{
+
+margin-bottom:15px;
+
+}
+
+}

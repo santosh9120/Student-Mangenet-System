@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>My Courses | Student Management System</title>
+
+<link rel="stylesheet" href="css/student-courses.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<!-- ================= Sidebar ================= -->
+
+<aside class="sidebar">
+
+<div class="logo">
+
+<i class="fas fa-user-graduate"></i>
+
+<h2>Student</h2>
+
+</div>
+
+<ul>
+
+<li>
+
+<a href="student-dashboard.html">
+
+<i class="fas fa-house"></i>
+
+<span>Dashboard</span>
+
+</a>
+
+</li>
+
+<li>
+
+<a href="student-profile.html">
+
+<i class="fas fa-user"></i>
+
+<span>My Profile</span>
+
+</a>
+
+</li>
+
+<li class="active">
+
+<a href="student-courses.html">
+
+<i class="fas fa-book-open"></i>
+
+<span>My Courses</span>
+
+</a>
+
+</li>
+
+<li>
+
+<a href="student-attendance.html">
+
+<i class="fas fa-calendar-check"></i>
+
+<span>Attendance</span>
+
+</a>
+
+</li>
+
+<li>
+
+<a href="student-results.html">
+
+<i class="fas fa-chart-line"></i>
+
+<span>Results</span>
+
+</a>
+
+</li>
+
+<li>
+
+<a href="student-notices.html">
+
+<i class="fas fa-bell"></i>
+
+<span>Notices</span>
+
+</a>
+
+</li>
+
+<li>
+
+<a href="student-settings.html">
+
+<i class="fas fa-gear"></i>
+
+<span>Settings</span>
+
+</a>
+
+</li>
+
+<li>
+
+<a href="login.html" id="logout">
+
+<i class="fas fa-right-from-bracket"></i>
+
+<span>Logout</span>
+
+</a>
+
+</li>
+
+</ul>
+
+</aside>
+
+<!-- ================= Main ================= -->
+
+<main class="main">
+
+<!-- Topbar -->
+
+<header class="topbar">
+
+<div>
+
+<h1>My Courses</h1>
+
+<p>Welcome back, Santosh 👋</p>
+
+</div>
+
+<div class="top-right">
+
+<input
+type="text"
+id="searchCourse"
+placeholder="Search Courses...">
+
+<div id="clock"></div>
+
+</div>
+
+</header>
+
+<!-- ================= Dashboard Cards ================= -->
+
+<section class="cards">
+
+<div class="card">
+
+<i class="fas fa-book-open"></i>
+
+<h2>8</h2>
+
+<p>Total Courses</p>
+
+</div>
+
+<div class="card">
+
+<i class="fas fa-circle-check"></i>
+
+<h2>5</h2>
+
+<p>Completed</p>
+
+</div>
+
+<div class="card">
+
+<i class="fas fa-spinner"></i>
+
+<h2>3</h2>
+
+<p>Ongoing</p>
+
+</div>
+
+<div class="card">
+
+<i class="fas fa-award"></i>
+
+<h2>24</h2>
+
+<p>Total Credits</p>
+
+</div>
+
+</section>
+
+<!-- ================= Course Table ================= -->
+
+<section class="table-box">
+
+<h2>
+
+<i class="fas fa-book"></i>
+
+Enrolled Courses
+
+</h2>
+
+<table id="courseTable">
+
+<thead>
+
+<tr>
+
+<th>Code</th>
+
+<th>Course</th>
+
+<th>Faculty</th>
+
+<th>Credits</th>
+
+<th>Status</th>
+
+<th>Action</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>CS601</td>
+
+<td>Java Programming</td>
+
+<td>Prof. Sharma</td>
+
+<td>4</td>
+
+<td>
+
+<span class="status active">
+
+Running
+
+</span>
+
+</td>
+
+<td>
+
+<button class="viewBtn">
+
+View
+
+</button>
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>CS602</td>
+
+<td>Database Management System</td>
+
+<td>Prof. Patil</td>
+
+<td>4</td>
+
+<td>
+
+<span class="status complete">
+
+Completed
+
+</span>
+
+</td>
+
+<td>
+
+<button class="viewBtn">
+
+View
+
+</button>
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>CS603</td>
+
+<td>Operating System</td>
+
+<td>Prof. Kulkarni</td>
+
+<td>4</td>
+
+<td>
+
+<span class="status active">
+
+Running
+
+</span>
+
+</td>
+
+<td>
+
+<button class="viewBtn">
+
+View
+
+</button>
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>CS604</td>
+
+<td>Computer Networks</td>
+
+<td>Prof. Joshi</td>
+
+<td>3</td>
+
+<td>
+
+<span class="status complete">
+
+Completed
+
+</span>
+
+</td>
+
+<td>
+
+<button class="viewBtn">
+
+View
+
+</button>
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>CS605</td>
+
+<td>Software Engineering</td>
+
+<td>Prof. Deshmukh</td>
+
+<td>3</td>
+
+<td>
+
+<span class="status active">
+
+Running
+
+</span>
+
+</td>
+
+<td>
+
+<button class="viewBtn">
+
+View
+
+</button>
+
+</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</section>
+<!-- ================= Course Progress ================= -->
+
+<section class="dashboard-grid">
+
+<div class="box">
+
+<h2><i class="fas fa-chart-line"></i> Course Progress</h2>
+
+<div class="progress-item">
+
+<p>Java Programming</p>
+
+<div class="progress">
+<div class="progress-bar" style="width:85%;">85%</div>
+</div>
+
+</div>
+
+<div class="progress-item">
+
+<p>Database Management System</p>
+
+<div class="progress">
+<div class="progress-bar" style="width:90%;">90%</div>
+</div>
+
+</div>
+
+<div class="progress-item">
+
+<p>Operating System</p>
+
+<div class="progress">
+<div class="progress-bar" style="width:75%;">75%</div>
+</div>
+
+</div>
+
+<div class="progress-item">
+
+<p>Computer Networks</p>
+
+<div class="progress">
+<div class="progress-bar" style="width:80%;">80%</div>
+</div>
+
+</div>
+
+<div class="progress-item">
+
+<p>Software Engineering</p>
+
+<div class="progress">
+<div class="progress-bar" style="width:70%;">70%</div>
+</div>
+
+</div>
+
+</div>
+
+<!-- Faculty Information -->
+
+<div class="box">
+
+<h2><i class="fas fa-chalkboard-teacher"></i> Faculty</h2>
+
+<div class="faculty-card">
+
+<h3>Prof. Sharma</h3>
+
+<p>Java Programming</p>
+
+<p>Email : sharma@college.edu</p>
+
+</div>
+
+<div class="faculty-card">
+
+<h3>Prof. Patil</h3>
+
+<p>DBMS</p>
+
+<p>Email : patil@college.edu</p>
+
+</div>
+
+<div class="faculty-card">
+
+<h3>Prof. Kulkarni</h3>
+
+<p>Operating System</p>
+
+<p>Email : kulkarni@college.edu</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= Weekly Schedule ================= -->
+
+<section class="table-box">
+
+<h2>
+
+<i class="fas fa-calendar-week"></i>
+
+Weekly Class Schedule
+
+</h2>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Day</th>
+
+<th>09:00</th>
+
+<th>10:00</th>
+
+<th>11:30</th>
+
+<th>02:00</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Monday</td>
+
+<td>Java</td>
+
+<td>DBMS</td>
+
+<td>OS</td>
+
+<td>CN</td>
+
+</tr>
+
+<tr>
+
+<td>Tuesday</td>
+
+<td>Java</td>
+
+<td>SE</td>
+
+<td>DBMS</td>
+
+<td>Lab</td>
+
+</tr>
+
+<tr>
+
+<td>Wednesday</td>
+
+<td>CN</td>
+
+<td>OS</td>
+
+<td>Java</td>
+
+<td>Library</td>
+
+</tr>
+
+<tr>
+
+<td>Thursday</td>
+
+<td>DBMS</td>
+
+<td>SE</td>
+
+<td>Java Lab</td>
+
+<td>CN</td>
+
+</tr>
+
+<tr>
+
+<td>Friday</td>
+
+<td>OS</td>
+
+<td>Java</td>
+
+<td>Project</td>
+
+<td>Sports</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</section>
+
+<!-- ================= Course Details Modal ================= -->
+
+<div class="modal" id="courseModal">
+
+<div class="modal-content">
+
+<span class="close">&times;</span>
+
+<h2>Course Details</h2>
+
+<p><strong>Course :</strong> Java Programming</p>
+
+<p><strong>Faculty :</strong> Prof. Sharma</p>
+
+<p><strong>Credits :</strong> 4</p>
+
+<p><strong>Status :</strong> Running</p>
+
+<p><strong>Description :</strong></p>
+
+<p>
+
+This course covers Core Java, OOP, Collections, Exception Handling,
+JDBC, Multithreading and basic Java Projects.
+
+</p>
+
+<button id="closeModal">
+
+Close
+
+</button>
+
+</div>
+
+</div>
+
+<!-- ================= Footer ================= -->
+
+<footer class="footer">
+
+<p>
+
+© 2026 Student Management System | Developed by Santosh
+
+</p>
+
+</footer>
+
+</main>
+
+</div>
+
+<script src="/js/student-courses.js"></script>
+
+<script>
+
+if(localStorage.getItem("theme")==="dark"){
+
+document.body.classList.add("dark-mode");
+
+}
+
+</script>
+
+</body>
+</html>

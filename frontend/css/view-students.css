@@ -1,0 +1,193 @@
+/* ==============================
+   View Students CSS
+============================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#f4f7fc;
+}
+
+/* Layout */
+
+.container{
+    display:flex;
+}
+
+/* Sidebar */
+
+.sidebar{
+    width:250px;
+    min-height:100vh;
+    background:#1e3a8a;
+    color:white;
+    position:fixed;
+    left:0;
+    top:0;
+    padding:20px;
+}
+
+.logo{
+    text-align:center;
+    margin-bottom:30px;
+}
+
+.logo i{
+    font-size:55px;
+    color:#ffd54f;
+}
+
+.logo h2{
+    margin-top:10px;
+}
+
+.sidebar ul{
+    list-style:none;
+}
+
+.sidebar ul li{
+    margin:15px 0;
+}
+
+.sidebar ul li a{
+    display:block;
+    color:white;
+    text-decoration:none;
+    padding:12px;
+    border-radius:8px;
+    transition:.3s;
+}
+
+.sidebar ul li.active a,
+.sidebar ul li a:hover{
+    background:#2563eb;
+}
+
+/* Main */
+
+.main{
+    margin-left:250px;
+    width:calc(100% - 250px);
+    padding:30px;
+}
+
+/* Topbar */
+
+.topbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:25px;
+}
+
+.topbar h1{
+    color:#1e3a8a;
+}
+
+.topbar input{
+    width:300px;
+    padding:12px;
+    border:1px solid #ccc;
+    border-radius:8px;
+    outline:none;
+}
+
+.topbar input:focus{
+    border-color:#2563eb;
+}
+
+/* Table */
+
+.table-box{
+    background:#fff;
+    padding:25px;
+    border-radius:12px;
+    box-shadow:0 5px 20px rgba(0,0,0,.1);
+    overflow-x:auto;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+thead{
+    background:#2563eb;
+    color:#fff;
+}
+
+th,td{
+    padding:14px;
+    text-align:left;
+    border-bottom:1px solid #ddd;
+}
+
+tbody tr:hover{
+    background:#f1f5ff;
+}
+
+/* Buttons */
+
+.edit-btn{
+    background:#0d6efd;
+    color:white;
+    border:none;
+    padding:8px 12px;
+    border-radius:6px;
+    cursor:pointer;
+    margin-right:5px;
+}
+
+.edit-btn:hover{
+    background:#0b5ed7;
+}
+
+.delete-btn{
+    background:#dc3545;
+    color:white;
+    border:none;
+    padding:8px 12px;
+    border-radius:6px;
+    cursor:pointer;
+}
+
+.delete-btn:hover{
+    background:#bb2d3b;
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+
+.sidebar{
+    position:relative;
+    width:100%;
+    min-height:auto;
+}
+
+.main{
+    margin-left:0;
+    width:100%;
+    padding:20px;
+}
+
+.topbar{
+    flex-direction:column;
+    gap:15px;
+    align-items:flex-start;
+}
+
+.topbar input{
+    width:100%;
+}
+
+table{
+    min-width:900px;
+}
+
+}

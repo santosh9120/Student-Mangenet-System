@@ -1,0 +1,377 @@
+/* ==========================================
+   Student Login Page
+========================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+html,
+body{
+    width:100%;
+    height:100%;
+    overflow-x:hidden;
+}
+
+body{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#0f172a,#1e3a8a,#2563eb);
+    position:relative;
+}
+
+/* Background Circles */
+
+body::before{
+    content:"";
+    position:absolute;
+    width:400px;
+    height:400px;
+    border-radius:50%;
+    background:rgba(255,255,255,.08);
+    top:-120px;
+    left:-120px;
+}
+
+body::after{
+    content:"";
+    position:absolute;
+    width:350px;
+    height:350px;
+    border-radius:50%;
+    background:rgba(255,255,255,.06);
+    bottom:-120px;
+    right:-120px;
+}
+
+/* Login Container */
+
+.login-container{
+    width:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:30px;
+    position:relative;
+    z-index:10;
+}
+
+/* Login Card */
+
+.login-card{
+
+    width:500px;
+    max-width:95%;
+
+    background:rgba(255,255,255,.12);
+
+    backdrop-filter:blur(20px);
+
+    border:1px solid rgba(255,255,255,.20);
+
+    border-radius:25px;
+
+    padding:45px;
+
+    color:#fff;
+
+    box-shadow:0 20px 45px rgba(0,0,0,.35);
+
+    animation:floatCard 5s ease-in-out infinite;
+
+}
+
+@keyframes floatCard{
+
+0%{transform:translateY(0);}
+50%{transform:translateY(-10px);}
+100%{transform:translateY(0);}
+
+}
+
+/* Header */
+
+.login-header{
+
+    text-align:center;
+    margin-bottom:30px;
+
+}
+
+.login-header i{
+
+    font-size:70px;
+    color:#FFD54F;
+    margin-bottom:15px;
+
+}
+
+.login-header h2{
+
+    font-size:36px;
+    font-weight:700;
+    margin-bottom:10px;
+
+}
+
+.login-header p{
+
+    color:#ddd;
+    font-size:16px;
+
+}
+
+/* Input */
+
+.input-box{
+
+    display:flex;
+    align-items:center;
+
+    background:rgba(255,255,255,.12);
+
+    border:1px solid transparent;
+
+    border-radius:12px;
+
+    padding:14px 16px;
+
+    margin-bottom:18px;
+
+    transition:.3s;
+
+}
+
+.input-box:hover{
+
+    transform:translateY(-2px);
+
+}
+
+.input-box:focus-within{
+
+    border-color:#FFD54F;
+
+    box-shadow:0 0 15px rgba(255,213,79,.45);
+
+}
+
+.input-box i{
+
+    width:30px;
+
+    color:#FFD54F;
+
+    font-size:18px;
+
+}
+
+.input-box input{
+
+    width:100%;
+
+    border:none;
+
+    outline:none;
+
+    background:transparent;
+
+    color:#fff;
+
+    font-size:16px;
+
+}
+
+.input-box input::placeholder{
+
+    color:#ddd;
+
+}
+
+/* Remember */
+
+.options{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin:15px 0 25px;
+
+    font-size:14px;
+
+}
+
+.options label{
+
+    color:#eee;
+
+}
+
+.options a{
+
+    color:#FFD54F;
+
+    text-decoration:none;
+
+    font-weight:600;
+
+}
+
+.options a:hover{
+
+    text-decoration:underline;
+
+}
+
+/* Button */
+
+.login-btn{
+
+    width:100%;
+
+    padding:15px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:#FFD54F;
+
+    color:#111;
+
+    font-size:18px;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.login-btn:hover{
+
+    background:#FFC107;
+
+    transform:translateY(-3px);
+
+    box-shadow:0 15px 30px rgba(255,193,7,.35);
+
+}
+
+/* Links */
+
+.register-link{
+
+    margin-top:25px;
+
+    text-align:center;
+
+    color:#ddd;
+
+}
+
+.register-link a{
+
+    color:#FFD54F;
+
+    text-decoration:none;
+
+    font-weight:600;
+
+}
+
+.register-link a:hover{
+
+    text-decoration:underline;
+
+}
+
+/* Back Home */
+
+.back-home{
+
+    text-align:center;
+
+    margin-top:20px;
+
+}
+
+.back-home a{
+
+    color:#fff;
+
+    text-decoration:none;
+
+    transition:.3s;
+
+}
+
+.back-home a:hover{
+
+    color:#FFD54F;
+
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+
+.login-card{
+
+    width:95%;
+    padding:35px;
+
+}
+
+.login-header h2{
+
+    font-size:30px;
+
+}
+
+}
+
+@media(max-width:480px){
+
+.login-card{
+
+    padding:25px 20px;
+
+}
+
+.login-header i{
+
+    font-size:55px;
+
+}
+
+.login-header h2{
+
+    font-size:24px;
+
+}
+
+.login-btn{
+
+    font-size:16px;
+
+}
+
+.options{
+
+    flex-direction:column;
+    gap:10px;
+
+}
+
+}

@@ -1,0 +1,528 @@
+/* ==========================================
+   Student Profile CSS
+========================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#f4f7fc;
+    color:#333;
+}
+
+/* ================= Container ================= */
+
+.container{
+    display:flex;
+    min-height:100vh;
+}
+
+/* ================= Sidebar ================= */
+
+.sidebar{
+    width:260px;
+    background:linear-gradient(180deg,#1e3a8a,#2563eb);
+    color:#fff;
+    position:fixed;
+    top:0;
+    left:0;
+    bottom:0;
+    overflow-y:auto;
+}
+
+.logo{
+    text-align:center;
+    padding:30px 20px;
+}
+
+.logo i{
+    font-size:55px;
+    color:#FFD54F;
+}
+
+.logo h2{
+    margin-top:10px;
+    font-size:26px;
+}
+
+.sidebar ul{
+    list-style:none;
+}
+
+.sidebar ul li{
+    margin:8px 15px;
+}
+
+.sidebar ul li a{
+    display:flex;
+    align-items:center;
+    gap:15px;
+    padding:15px;
+    color:#fff;
+    text-decoration:none;
+    border-radius:10px;
+    transition:.3s;
+}
+
+.sidebar ul li.active a,
+.sidebar ul li a:hover{
+    background:rgba(255,255,255,.18);
+}
+
+/* ================= Main ================= */
+
+.main{
+    margin-left:260px;
+    width:calc(100% - 260px);
+    padding:30px;
+}
+
+/* ================= Topbar ================= */
+
+.topbar{
+    background:#fff;
+    border-radius:15px;
+    padding:20px 30px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+    margin-bottom:30px;
+}
+
+.topbar h1{
+    color:#2563eb;
+}
+
+#clock{
+    color:#2563eb;
+    font-weight:600;
+}
+
+/* ================= Profile Card ================= */
+
+.profile-card{
+    background:#fff;
+    border-radius:20px;
+    padding:30px;
+    display:flex;
+    align-items:center;
+    gap:40px;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+    margin-bottom:30px;
+}
+
+.profile-image{
+    text-align:center;
+}
+
+.profile-image img{
+    width:180px;
+    height:180px;
+    border-radius:50%;
+    object-fit:cover;
+    border:5px solid #2563eb;
+}
+
+.profile-image input{
+    display:none;
+}
+
+.upload-btn{
+    display:inline-block;
+    margin-top:15px;
+    background:#2563eb;
+    color:#fff;
+    padding:10px 18px;
+    border-radius:8px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.upload-btn:hover{
+    background:#1d4ed8;
+}
+
+.profile-details h2{
+    color:#1e3a8a;
+    margin-bottom:10px;
+    font-size:30px;
+}
+
+.profile-details p{
+    margin:8px 0;
+    color:#555;
+}
+
+/* ================= Information Box ================= */
+
+.info-box{
+    background:#fff;
+    border-radius:18px;
+    padding:30px;
+    margin-bottom:25px;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+.info-box h2{
+    color:#2563eb;
+    margin-bottom:25px;
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+/* ================= Grid ================= */
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:20px;
+}
+
+.full-width{
+    grid-column:1/-1;
+}
+
+/* ================= Form ================= */
+
+label{
+    display:block;
+    margin-bottom:8px;
+    font-weight:600;
+    color:#444;
+}
+
+input,
+select,
+textarea{
+    width:100%;
+    padding:14px;
+    border:1px solid #ddd;
+    border-radius:10px;
+    outline:none;
+    font-size:15px;
+    transition:.3s;
+}
+
+input:focus,
+select:focus,
+textarea:focus{
+    border-color:#2563eb;
+    box-shadow:0 0 10px rgba(37,99,235,.15);
+}
+
+textarea{
+    resize:vertical;
+}
+/* ================= Buttons ================= */
+
+.button-group{
+
+    display:flex;
+    justify-content:flex-end;
+    gap:15px;
+    margin:30px 0;
+
+}
+
+.save-btn,
+.cancel-btn{
+
+    border:none;
+    padding:14px 28px;
+    border-radius:10px;
+    cursor:pointer;
+    font-size:16px;
+    font-weight:600;
+    transition:.3s;
+
+}
+
+.save-btn{
+
+    background:#2563eb;
+    color:#fff;
+
+}
+
+.save-btn:hover{
+
+    background:#1d4ed8;
+    transform:translateY(-3px);
+
+}
+
+.cancel-btn{
+
+    background:#ef4444;
+    color:#fff;
+
+}
+
+.cancel-btn:hover{
+
+    background:#dc2626;
+    transform:translateY(-3px);
+
+}
+
+.save-btn i,
+.cancel-btn i{
+
+    margin-right:8px;
+
+}
+
+/* ================= Footer ================= */
+
+.footer{
+
+    margin-top:30px;
+    text-align:center;
+    padding:20px;
+    background:#fff;
+    border-radius:15px;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+    color:#666;
+
+}
+
+/* ================= Hover Animation ================= */
+
+.profile-card,
+.info-box{
+
+    transition:.35s;
+
+}
+
+.profile-card:hover,
+.info-box:hover{
+
+    transform:translateY(-5px);
+
+}
+
+/* ================= Fade Animation ================= */
+
+.profile-card,
+.info-box{
+
+    animation:fadeUp .6s ease;
+
+}
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+        transform:translateY(30px);
+
+    }
+
+    to{
+
+        opacity:1;
+        transform:translateY(0);
+
+    }
+
+}
+
+/* ================= Scrollbar ================= */
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#2563eb;
+    border-radius:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#eee;
+
+}
+
+/* ================= Dark Mode ================= */
+
+body.dark-mode{
+
+    background:#111827;
+    color:#f3f4f6;
+
+}
+
+body.dark-mode .topbar,
+body.dark-mode .profile-card,
+body.dark-mode .info-box,
+body.dark-mode .footer{
+
+    background:#1f2937;
+    color:#f3f4f6;
+
+}
+
+body.dark-mode .profile-details h2,
+body.dark-mode .info-box h2{
+
+    color:#60a5fa;
+
+}
+
+body.dark-mode input,
+body.dark-mode textarea,
+body.dark-mode select{
+
+    background:#374151;
+    color:#fff;
+    border:1px solid #4b5563;
+
+}
+
+body.dark-mode label{
+
+    color:#ddd;
+
+}
+
+body.dark-mode .footer{
+
+    color:#ddd;
+
+}
+
+/* ================= Responsive ================= */
+
+@media(max-width:992px){
+
+.grid{
+
+    grid-template-columns:1fr;
+
+}
+
+.profile-card{
+
+    flex-direction:column;
+    text-align:center;
+
+}
+
+.button-group{
+
+    justify-content:center;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.container{
+
+    display:block;
+
+}
+
+.sidebar{
+
+    width:100%;
+    position:relative;
+    min-height:auto;
+
+}
+
+.main{
+
+    margin-left:0;
+    width:100%;
+    padding:20px;
+
+}
+
+.topbar{
+
+    flex-direction:column;
+    gap:15px;
+    text-align:center;
+
+}
+
+.profile-image img{
+
+    width:150px;
+    height:150px;
+
+}
+
+.button-group{
+
+    flex-direction:column;
+
+}
+
+.save-btn,
+.cancel-btn{
+
+    width:100%;
+
+}
+
+}
+
+@media(max-width:480px){
+
+.topbar h1{
+
+    font-size:24px;
+
+}
+
+.profile-details h2{
+
+    font-size:24px;
+
+}
+
+.info-box{
+
+    padding:20px;
+
+}
+
+.profile-card{
+
+    padding:20px;
+
+}
+
+input,
+select,
+textarea{
+
+    font-size:14px;
+
+}
+
+.upload-btn{
+
+    width:100%;
+
+}
+
+}

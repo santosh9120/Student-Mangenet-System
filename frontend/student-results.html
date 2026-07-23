@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Student Results | Student Management System</title>
+
+<link rel="stylesheet" href="css/student-results.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<!-- ================= Sidebar ================= -->
+
+<aside class="sidebar">
+
+<div class="logo">
+
+<i class="fas fa-user-graduate"></i>
+
+<h2>Student</h2>
+
+</div>
+
+<ul>
+
+<li>
+
+<a href="student-dashboard.html">
+
+<i class="fas fa-house"></i>
+
+<span>Dashboard</span>
+
+</a>
+
+</li>
+
+<li>
+
+<a href="student-profile.html">
+
+<i class="fas fa-user"></i>
+
+<span>My Profile</span>
+
+</a>
+
+</li>
+
+<li>
+
+<a href="student-courses.html">
+
+<i class="fas fa-book-open"></i>
+
+<span>My Courses</span>
+
+</a>
+
+</li>
+
+<li>
+
+<a href="student-attendance.html">
+
+<i class="fas fa-calendar-check"></i>
+
+<span>Attendance</span>
+
+</a>
+
+</li>
+
+<li class="active">
+
+<a href="student-results.html">
+
+<i class="fas fa-chart-line"></i>
+
+<span>Results</span>
+
+</a>
+
+</li>
+
+<li>
+
+<a href="student-notices.html">
+
+<i class="fas fa-bullhorn"></i>
+
+<span>Notices</span>
+
+</a>
+
+</li>
+
+<li>
+
+<a href="student-settings.html">
+
+<i class="fas fa-gear"></i>
+
+<span>Settings</span>
+
+</a>
+
+</li>
+
+<li>
+
+<a href="login.html" id="logout">
+
+<i class="fas fa-right-from-bracket"></i>
+
+<span>Logout</span>
+
+</a>
+
+</li>
+
+</ul>
+
+</aside>
+
+<!-- ================= Main ================= -->
+
+<main class="main">
+
+<header class="topbar">
+
+<div>
+
+<h1>Academic Results</h1>
+
+<p>Your semester performance</p>
+
+</div>
+
+<div class="top-right">
+
+<input
+type="text"
+id="searchSubject"
+placeholder="Search Subject">
+
+<div id="clock"></div>
+
+</div>
+
+</header>
+
+<!-- ================= Result Cards ================= -->
+
+<section class="cards">
+
+<div class="card">
+
+<i class="fas fa-award"></i>
+
+<h2>8.92</h2>
+
+<p>Current SGPA</p>
+
+</div>
+
+<div class="card">
+
+<i class="fas fa-graduation-cap"></i>
+
+<h2>8.75</h2>
+
+<p>Overall CGPA</p>
+
+</div>
+
+<div class="card">
+
+<i class="fas fa-book"></i>
+
+<h2>8</h2>
+
+<p>Total Subjects</p>
+
+</div>
+
+<div class="card">
+
+<i class="fas fa-medal"></i>
+
+<h2>First Class</h2>
+
+<p>Result Status</p>
+
+</div>
+
+</section>
+
+<!-- ================= Results Table ================= -->
+
+<section class="table-box">
+
+<h2>
+
+<i class="fas fa-table"></i>
+
+Semester Result
+
+</h2>
+
+<table id="resultTable">
+
+<thead>
+
+<tr>
+
+<th>Subject Code</th>
+
+<th>Subject Name</th>
+
+<th>Internal</th>
+
+<th>External</th>
+
+<th>Total</th>
+
+<th>Grade</th>
+
+<th>Status</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>CS601</td>
+
+<td>Java Programming</td>
+
+<td>28</td>
+
+<td>62</td>
+
+<td>90</td>
+
+<td>A+</td>
+
+<td>Pass</td>
+
+</tr>
+
+<tr>
+
+<td>CS602</td>
+
+<td>Database Management System</td>
+
+<td>27</td>
+
+<td>60</td>
+
+<td>87</td>
+
+<td>A</td>
+
+<td>Pass</td>
+
+</tr>
+
+<tr>
+
+<td>CS603</td>
+
+<td>Operating System</td>
+
+<td>26</td>
+
+<td>58</td>
+
+<td>84</td>
+
+<td>A</td>
+
+<td>Pass</td>
+
+</tr>
+
+<tr>
+
+<td>CS604</td>
+
+<td>Computer Networks</td>
+
+<td>29</td>
+
+<td>63</td>
+
+<td>92</td>
+
+<td>A+</td>
+
+<td>Pass</td>
+
+</tr>
+
+<tr>
+
+<td>CS605</td>
+
+<td>Software Engineering</td>
+
+<td>25</td>
+
+<td>57</td>
+
+<td>82</td>
+
+<td>B+</td>
+
+<td>Pass</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</section>
+<!-- ================= Dashboard Grid ================= -->
+
+<section class="dashboard-grid">
+
+    <!-- Performance Chart -->
+
+    <div class="box">
+
+        <h2>
+            <i class="fas fa-chart-bar"></i>
+            Performance Analysis
+        </h2>
+
+        <canvas id="resultChart"></canvas>
+
+    </div>
+
+    <!-- Grade Summary -->
+
+    <div class="box">
+
+        <h2>
+            <i class="fas fa-medal"></i>
+            Grade Summary
+        </h2>
+
+        <div class="grade-card">
+            <h3>A+</h3>
+            <p>2 Subjects</p>
+        </div>
+
+        <div class="grade-card">
+            <h3>A</h3>
+            <p>2 Subjects</p>
+        </div>
+
+        <div class="grade-card">
+            <h3>B+</h3>
+            <p>1 Subject</p>
+        </div>
+
+        <div class="grade-card">
+            <h3>Pass Rate</h3>
+            <p>100%</p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= SGPA & CGPA ================= -->
+
+<section class="table-box">
+
+<h2>
+
+<i class="fas fa-chart-line"></i>
+
+Academic Performance
+
+</h2>
+
+<div class="progress-item">
+
+<p>Semester GPA (SGPA)</p>
+
+<div class="progress">
+
+<div class="progress-bar" style="width:89%;">
+
+8.92
+
+</div>
+
+</div>
+
+</div>
+
+<div class="progress-item">
+
+<p>Overall CGPA</p>
+
+<div class="progress">
+
+<div class="progress-bar" style="width:87%;">
+
+8.75
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= Download ================= -->
+
+<section class="table-box">
+
+<h2>
+
+<i class="fas fa-file-pdf"></i>
+
+Download Result
+
+</h2>
+
+<p>
+
+Download your semester marksheet for future reference.
+
+</p>
+
+<br>
+
+<button id="downloadMarksheet" class="download-btn">
+
+<i class="fas fa-download"></i>
+
+Download Marksheet
+
+</button>
+
+</section>
+
+<!-- ================= Academic Summary ================= -->
+
+<section class="table-box">
+
+<h2>
+
+<i class="fas fa-circle-info"></i>
+
+Academic Summary
+
+</h2>
+
+<ul class="summary-list">
+
+<li>Total Subjects : <strong>8</strong></li>
+
+<li>Passed Subjects : <strong>8</strong></li>
+
+<li>Failed Subjects : <strong>0</strong></li>
+
+<li>Overall Percentage : <strong>89%</strong></li>
+
+<li>Current SGPA : <strong>8.92</strong></li>
+
+<li>Overall CGPA : <strong>8.75</strong></li>
+
+<li>Result Status : <strong>PASS</strong></li>
+
+</ul>
+
+</section>
+
+<!-- ================= Footer ================= -->
+
+<footer class="footer">
+
+<p>
+
+© 2026 Student Management System | Developed by Santosh
+
+</p>
+
+</footer>
+
+</main>
+
+</div>
+
+<script src="/js/student-results.js"></script>
+
+<script>
+
+if(localStorage.getItem("theme")==="dark"){
+
+document.body.classList.add("dark-mode");
+
+}
+
+</script>
+
+</body>
+
+</html>

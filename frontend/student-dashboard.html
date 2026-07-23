@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Student Dashboard | Student Management System</title>
+
+<link rel="stylesheet" href="css/student-dashboard.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+rel="stylesheet">
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<!-- ================= Sidebar ================= -->
+
+<aside class="sidebar">
+
+<div class="logo">
+
+<i class="fas fa-user-graduate"></i>
+
+<h2>Student</h2>
+
+</div>
+
+<ul>
+
+<li class="active">
+
+<a href="student-dashboard.html">
+
+<i class="fas fa-house"></i>
+
+<span>Dashboard</span>
+
+</a>
+
+</li>
+
+<li>
+
+<a href="student-profile.html">
+
+<i class="fas fa-user"></i>
+
+<span>My Profile</span>
+
+</a>
+
+</li>
+
+<li>
+
+<a href="student-courses.html">
+
+<i class="fas fa-book-open"></i>
+
+<span>My Courses</span>
+
+</a>
+
+</li>
+
+<li>
+
+<a href="student-attendance.html">
+
+<i class="fas fa-calendar-check"></i>
+
+<span>Attendance</span>
+
+</a>
+
+</li>
+
+<li>
+
+<a href="student-results.html">
+
+<i class="fas fa-chart-line"></i>
+
+<span>Results</span>
+
+</a>
+
+</li>
+
+<li>
+
+<a href="student-notices.html">
+
+<i class="fas fa-bullhorn"></i>
+
+<span>Notices</span>
+
+</a>
+
+</li>
+
+<li>
+
+<a href="student-settings.html">
+
+<i class="fas fa-gear"></i>
+
+<span>Settings</span>
+
+</a>
+
+</li>
+
+<li>
+
+<a href="login.html" id="logout">
+
+<i class="fas fa-right-from-bracket"></i>
+
+<span>Logout</span>
+
+</a>
+
+</li>
+
+</ul>
+
+</aside>
+
+<!-- ================= Main ================= -->
+
+<main class="main">
+
+<!-- Topbar -->
+
+<header class="topbar">
+
+<div class="left">
+
+<h1>Welcome, <span id="studentName">Santosh</span> 👋</h1>
+
+<p>Have a productive day.</p>
+
+</div>
+
+<div class="right">
+
+<input
+type="text"
+id="search"
+placeholder="Search...">
+
+<button id="themeBtn">
+
+<i class="fas fa-moon"></i>
+
+</button>
+
+<div id="clock"></div>
+
+<div class="profile">
+
+<img src="images/default-profile.png"
+onerror="this.src='https://via.placeholder.com/50'">
+
+</div>
+
+</div>
+
+</header>
+
+<!-- ================= Dashboard Cards ================= -->
+
+<section class="cards">
+
+<div class="card">
+
+<i class="fas fa-book-open"></i>
+
+<h2>8</h2>
+
+<p>Total Subjects</p>
+
+</div>
+
+<div class="card">
+
+<i class="fas fa-calendar-check"></i>
+
+<h2>92%</h2>
+
+<p>Attendance</p>
+
+</div>
+
+<div class="card">
+
+<i class="fas fa-award"></i>
+
+<h2>8.91</h2>
+
+<p>SGPA</p>
+
+</div>
+
+<div class="card">
+
+<i class="fas fa-graduation-cap"></i>
+
+<h2>8.75</h2>
+
+<p>CGPA</p>
+
+</div>
+
+<div class="card">
+
+<i class="fas fa-file"></i>
+
+<h2>4</h2>
+
+<p>Assignments</p>
+
+</div>
+
+<div class="card">
+
+<i class="fas fa-pen"></i>
+
+<h2>2</h2>
+
+<p>Upcoming Exams</p>
+
+</div>
+
+</section>
+
+<!-- ================= Grid ================= -->
+
+<div class="dashboard-grid">
+
+<!-- Timetable -->
+
+<div class="box">
+
+<h2>Today's Timetable</h2>
+
+<table>
+
+<tr>
+
+<th>Time</th>
+
+<th>Subject</th>
+
+<th>Faculty</th>
+
+</tr>
+
+<tr>
+
+<td>09:00 AM</td>
+
+<td>Java</td>
+
+<td>Dr. Sharma</td>
+
+</tr>
+
+<tr>
+
+<td>10:00 AM</td>
+
+<td>DBMS</td>
+
+<td>Prof. Patil</td>
+
+</tr>
+
+<tr>
+
+<td>11:30 AM</td>
+
+<td>Operating System</td>
+
+<td>Prof. Joshi</td>
+
+</tr>
+
+<tr>
+
+<td>02:00 PM</td>
+
+<td>Computer Networks</td>
+
+<td>Prof. Kulkarni</td>
+
+</tr>
+
+</table>
+
+</div>
+
+<!-- Notices -->
+
+<div class="box">
+
+<h2>Latest Notices</h2>
+
+<ul class="notice-list">
+
+<li>📢 Semester Examination starts from 15 August.</li>
+
+<li>📢 Project submission deadline is 10 August.</li>
+
+<li>📢 Internship registration has started.</li>
+
+<li>📢 Library remains closed on Sunday.</li>
+
+<li>📢 Sports Event Registration Open.</li>
+
+</ul>
+
+</div>
+
+</div>
+<!-- ================= Performance ================= -->
+
+<div class="dashboard-grid">
+
+<!-- Attendance Progress -->
+
+<div class="box">
+
+<h2>Attendance Progress</h2>
+
+<div class="progress-container">
+
+<div class="progress-title">
+
+Overall Attendance
+
+<span>92%</span>
+
+</div>
+
+<div class="progress">
+
+<div class="progress-bar" style="width:92%;">
+
+92%
+
+</div>
+
+</div>
+
+<br>
+
+<div class="progress-title">
+
+Assignments Completed
+
+<span>80%</span>
+
+</div>
+
+<div class="progress">
+
+<div class="progress-bar assignment" style="width:80%;">
+
+80%
+
+</div>
+
+</div>
+
+<br>
+
+<div class="progress-title">
+
+Course Completion
+
+<span>75%</span>
+
+</div>
+
+<div class="progress">
+
+<div class="progress-bar course" style="width:75%;">
+
+75%
+
+</div>
+
+</div>
+
+</div>
+
+<!-- Student Profile -->
+
+<div class="box">
+
+<h2>Student Profile</h2>
+
+<div class="student-info">
+
+<img src="images/default-profile.png"
+onerror="this.src='https://via.placeholder.com/120'">
+
+<h3>Santosh</h3>
+
+<p>Computer Engineering</p>
+
+<p>Roll No : CE2025001</p>
+
+<p>Semester : VI</p>
+
+<p>Email : santosh@example.com</p>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- ================= Charts ================= -->
+
+<div class="dashboard-grid">
+
+<div class="box">
+
+<h2>Attendance Overview</h2>
+
+<canvas id="attendanceChart"></canvas>
+
+</div>
+
+<div class="box">
+
+<h2>Marks Overview</h2>
+
+<canvas id="marksChart"></canvas>
+
+</div>
+
+</div>
+
+<!-- ================= Recent Results ================= -->
+
+<div class="box">
+
+<h2>Recent Results</h2>
+
+<table>
+
+<tr>
+
+<th>Subject</th>
+
+<th>Marks</th>
+
+<th>Grade</th>
+
+</tr>
+
+<tr>
+
+<td>Java</td>
+
+<td>95</td>
+
+<td>A+</td>
+
+</tr>
+
+<tr>
+
+<td>DBMS</td>
+
+<td>90</td>
+
+<td>A</td>
+
+</tr>
+
+<tr>
+
+<td>Operating System</td>
+
+<td>88</td>
+
+<td>A</td>
+
+</tr>
+
+<tr>
+
+<td>Computer Networks</td>
+
+<td>91</td>
+
+<td>A+</td>
+
+</tr>
+
+<tr>
+
+<td>Software Engineering</td>
+
+<td>89</td>
+
+<td>A</td>
+
+</tr>
+
+</table>
+
+</div>
+
+<!-- ================= Upcoming Events ================= -->
+
+<div class="box">
+
+<h2>Upcoming Events</h2>
+
+<div class="event-list">
+
+<div class="event">
+
+<h3>📅 Mid Semester Exam</h3>
+
+<p>15 August 2026</p>
+
+</div>
+
+<div class="event">
+
+<h3>🎯 Project Submission</h3>
+
+<p>10 August 2026</p>
+
+</div>
+
+<div class="event">
+
+<h3>💼 Campus Placement Drive</h3>
+
+<p>25 August 2026</p>
+
+</div>
+
+<div class="event">
+
+<h3>🏆 Technical Fest</h3>
+
+<p>30 August 2026</p>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- ================= Footer ================= -->
+
+<footer class="footer">
+
+<p>
+
+© 2026 Student Management System | Developed by Santosh
+
+</p>
+
+</footer>
+
+</main>
+
+</div>
+
+<script src="/js/student-dashboard.js"></script>
+
+<script>
+
+// Automatically apply Admin Theme
+
+if(localStorage.getItem("theme")==="dark"){
+
+document.body.classList.add("dark-mode");
+
+}
+
+</script>
+
+</body>
+
+</html>

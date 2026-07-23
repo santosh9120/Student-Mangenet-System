@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Student Profile | Student Management System</title>
+</head>
+
+<link rel="stylesheet" href="./css/profile.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+
+
+<body>
+
+<div class="container">
+
+<!-- Sidebar -->
+
+<div class="sidebar">
+
+<div class="logo">
+
+<i class="fas fa-user-graduate"></i>
+
+<h2>Student</h2>
+
+</div>
+
+<ul>
+
+<li><a href="student-dashboard.html"><i class="fas fa-house"></i> Dashboard</a></li>
+
+<li class="active"><a href="#"><i class="fas fa-user"></i> Profile</a></li>
+
+<li><a href="attendance.html"><i class="fas fa-calendar-check"></i> Attendance</a></li>
+
+<li><a href="results.html"><i class="fas fa-award"></i> Results</a></li>
+
+<li><a href="courses.html"><i class="fas fa-book"></i> Courses</a></li>
+
+<li><a href="login.html"><i class="fas fa-right-from-bracket"></i> Logout</a></li>
+
+</ul>
+
+</div>
+
+<!-- Main -->
+
+<div class="main">
+
+<div class="topbar">
+
+<h1>Student Profile</h1>
+
+</div>
+
+<div class="profile-card">
+
+<div class="profile-left">
+
+<img src="images/profile.png" id="previewImage">
+
+<input type="file" id="photo">
+
+<button class="upload-btn">
+
+<i class="fas fa-upload"></i>
+
+Upload Photo
+
+</button>
+
+<h2 id="studentName">Santosh</h2>
+
+<p>Computer Engineering</p>
+
+</div>
+
+<div class="profile-right">
+
+<h2>Personal Information</h2>
+
+<form id="profileForm">
+
+<div class="row">
+
+<div class="input-group">
+
+<label>Full Name</label>
+
+<input type="text" value="Santosh">
+
+</div>
+
+<div class="input-group">
+
+<label>Roll Number</label>
+
+<input type="text" value="CE001">
+
+</div>
+
+</div>
+
+<div class="row">
+
+<div class="input-group">
+
+<label>Email</label>
+
+<input type="email" value="santosh@gmail.com">
+
+</div>
+
+<div class="input-group">
+
+<label>Mobile</label>
+
+<input type="text" value="9876543210">
+
+</div>
+
+</div>
+
+<div class="row">
+
+<div class="input-group">
+
+<label>Department</label>
+
+<input type="text" value="Computer Engineering">
+
+</div>
+
+<div class="input-group">
+
+<label>Year</label>
+
+<select>
+
+<option>First Year</option>
+
+<option>Second Year</option>
+
+<option selected>Third Year</option>
+
+<option>Final Year</option>
+
+</select>
+
+</div>
+
+</div>
+
+<h2 style="margin-top:30px;">Change Password</h2>
+
+<div class="row">
+
+<div class="input-group">
+
+<label>New Password</label>
+
+<input type="password">
+
+</div>
+
+<div class="input-group">
+
+<label>Confirm Password</label>
+
+<input type="password">
+
+</div>
+
+</div>
+
+<div class="buttons">
+
+<button class="save-btn">
+
+<i class="fas fa-floppy-disk"></i>
+
+Save Changes
+
+</button>
+
+<button type="reset" class="cancel-btn">
+
+<i class="fas fa-rotate-left"></i>
+
+Reset
+
+</button>
+
+</div>
+
+</form>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<script>
+
+const photo=document.getElementById("photo");
+
+const preview=document.getElementById("previewImage");
+
+photo.onchange=function(){
+
+preview.src=URL.createObjectURL(photo.files[0]);
+
+}
+
+</script>
+
+</body>
+
+</html>

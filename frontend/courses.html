@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Courses | Student Management System</title>
+
+<link rel="stylesheet" href="css/admin-dashboard.css">
+<link rel="stylesheet" href="css/courses.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<!-- Sidebar -->
+
+<aside class="sidebar">
+
+<div class="logo">
+
+<i class="fas fa-user-shield"></i>
+
+<h2>SMS Admin</h2>
+
+</div>
+
+<ul>
+
+<li>
+<a href="admin-dashboard.html">
+<i class="fas fa-gauge"></i>
+<span>Dashboard</span>
+</a>
+</li>
+
+<li>
+<a href="students.html">
+<i class="fas fa-user-graduate"></i>
+<span>Students</span>
+</a>
+</li>
+
+<li>
+<a href="teachers.html">
+<i class="fas fa-chalkboard-user"></i>
+<span>Teachers</span>
+</a>
+</li>
+
+<li>
+<a href="departments.html">
+<i class="fas fa-building"></i>
+<span>Departments</span>
+</a>
+</li>
+
+<li class="active">
+<a href="courses.html">
+<i class="fas fa-book-open"></i>
+<span>Courses</span>
+</a>
+</li>
+
+<li>
+<a href="attendance.html">
+<i class="fas fa-calendar-check"></i>
+<span>Attendance</span>
+</a>
+</li>
+
+<li>
+<a href="results.html">
+<i class="fas fa-chart-line"></i>
+<span>Results</span>
+</a>
+</li>
+
+<li>
+<a href="notices.html">
+<i class="fas fa-bullhorn"></i>
+<span>Notices</span>
+</a>
+</li>
+
+<li>
+<a href="settings.html">
+<i class="fas fa-gear"></i>
+<span>Settings</span>
+</a>
+</li>
+
+<li>
+<a href="admin-login.html" id="logout">
+<i class="fas fa-right-from-bracket"></i>
+<span>Logout</span>
+</a>
+</li>
+
+</ul>
+
+</aside>
+
+<!-- Main -->
+
+<main class="main">
+
+<header class="topbar">
+
+<button id="menuBtn">
+
+<i class="fas fa-bars"></i>
+
+</button>
+
+<h2>Course Management</h2>
+
+<div class="top-right">
+
+<input
+type="text"
+id="search"
+placeholder="Search Course">
+
+<button onclick="openCourseModal()">
+
+<i class="fas fa-plus"></i>
+
+</button>
+
+<div id="clock"></div>
+
+</div>
+
+</header>
+
+<section class="table-section">
+
+<div class="table-header">
+
+<h2>Course List</h2>
+
+</div>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>ID</th>
+<th>Course Code</th>
+<th>Course Name</th>
+<th>Department</th>
+<th>Credits</th>
+<th>Semester</th>
+<th>Actions</th>
+
+</tr>
+
+</thead>
+
+<tbody id="courseTable">
+
+</tbody>
+
+</table>
+
+</section>
+
+<!-- Add/Edit Modal -->
+
+<div id="courseModal"
+style="display:none;
+position:fixed;
+left:0;
+top:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,.5);
+justify-content:center;
+align-items:center;">
+
+<div
+style="background:#fff;
+padding:30px;
+width:500px;
+border-radius:15px;">
+
+<h2 id="modalTitle">
+
+Add Course
+
+</h2>
+
+<form id="courseForm">
+
+<input
+type="hidden"
+id="courseId">
+
+<input
+type="text"
+id="courseCode"
+placeholder="Course Code"
+required>
+
+<input
+type="text"
+id="courseName"
+placeholder="Course Name"
+required>
+
+<input
+type="text"
+id="department"
+placeholder="Department"
+required>
+
+<input
+type="number"
+id="credits"
+placeholder="Credits"
+required>
+
+<input
+type="number"
+id="semester"
+placeholder="Semester"
+required>
+
+<div class="modal-footer">
+
+<button
+type="button"
+class="btn btn-danger"
+onclick="closeModal()">
+
+Cancel
+
+</button>
+
+<button
+type="submit"
+class="btn btn-success">
+
+Save Course
+
+</button>
+
+</div>
+
+</form>
+
+</div>
+
+</div>
+
+</main>
+
+</div>
+
+<script src="/js/courses.js"></script>
+<script>
+
+if(localStorage.getItem("theme") === "dark"){
+
+    document.body.classList.add("dark-mode");
+
+}
+
+</script>
+
+</body>
+
+</html>

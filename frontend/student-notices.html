@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Student Notices | Student Management System</title>
+
+<link rel="stylesheet" href="css/student-notices.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<!-- ================= Sidebar ================= -->
+
+<aside class="sidebar">
+
+<div class="logo">
+
+<i class="fas fa-user-graduate"></i>
+
+<h2>Student</h2>
+
+</div>
+
+<ul>
+
+<li>
+<a href="student-dashboard.html">
+<i class="fas fa-house"></i>
+<span>Dashboard</span>
+</a>
+</li>
+
+<li>
+<a href="student-profile.html">
+<i class="fas fa-user"></i>
+<span>My Profile</span>
+</a>
+</li>
+
+<li>
+<a href="student-courses.html">
+<i class="fas fa-book-open"></i>
+<span>My Courses</span>
+</a>
+</li>
+
+<li>
+<a href="student-attendance.html">
+<i class="fas fa-calendar-check"></i>
+<span>Attendance</span>
+</a>
+</li>
+
+<li>
+<a href="student-results.html">
+<i class="fas fa-chart-line"></i>
+<span>Results</span>
+</a>
+</li>
+
+<li class="active">
+<a href="student-notices.html">
+<i class="fas fa-bell"></i>
+<span>Notices</span>
+</a>
+</li>
+
+<li>
+<a href="student-settings.html">
+<i class="fas fa-gear"></i>
+<span>Settings</span>
+</a>
+</li>
+
+<li>
+<a href="login.html" id="logout">
+<i class="fas fa-right-from-bracket"></i>
+<span>Logout</span>
+</a>
+</li>
+
+</ul>
+
+</aside>
+
+<!-- ================= Main ================= -->
+
+<main class="main">
+
+<header class="topbar">
+
+<div>
+
+<h1>Student Notices</h1>
+
+<p>Latest announcements from administration</p>
+
+</div>
+
+<div class="top-right">
+
+<input
+type="text"
+id="searchNotice"
+placeholder="Search Notice...">
+
+<div id="clock"></div>
+
+</div>
+
+</header>
+
+<!-- ================= Dashboard Cards ================= -->
+
+<section class="cards">
+
+<div class="card">
+
+<i class="fas fa-bell"></i>
+
+<h2>12</h2>
+
+<p>Total Notices</p>
+
+</div>
+
+<div class="card">
+
+<i class="fas fa-circle-exclamation"></i>
+
+<h2>3</h2>
+
+<p>Important</p>
+
+</div>
+
+<div class="card">
+
+<i class="fas fa-calendar-days"></i>
+
+<h2>5</h2>
+
+<p>Upcoming Events</p>
+
+</div>
+
+<div class="card">
+
+<i class="fas fa-download"></i>
+
+<h2>8</h2>
+
+<p>Attachments</p>
+
+</div>
+
+</section>
+
+<!-- ================= Notice Table ================= -->
+
+<section class="table-box">
+
+<h2>
+
+<i class="fas fa-newspaper"></i>
+
+Latest Notices
+
+</h2>
+
+<table id="noticeTable">
+
+<thead>
+
+<tr>
+
+<th>Date</th>
+
+<th>Category</th>
+
+<th>Title</th>
+
+<th>Published By</th>
+
+<th>Attachment</th>
+
+<th>Action</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>15 Jul 2026</td>
+
+<td>Exam</td>
+
+<td>Semester Examination Schedule</td>
+
+<td>Academic Office</td>
+
+<td>PDF</td>
+
+<td>
+
+<button class="viewBtn">
+
+View
+
+</button>
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>12 Jul 2026</td>
+
+<td>Holiday</td>
+
+<td>College Holiday Notice</td>
+
+<td>Principal</td>
+
+<td>PDF</td>
+
+<td>
+
+<button class="viewBtn">
+
+View
+
+</button>
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>09 Jul 2026</td>
+
+<td>Event</td>
+
+<td>Technical Fest Registration</td>
+
+<td>Training Cell</td>
+
+<td>PDF</td>
+
+<td>
+
+<button class="viewBtn">
+
+View
+
+</button>
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>05 Jul 2026</td>
+
+<td>Placement</td>
+
+<td>Campus Drive Announcement</td>
+
+<td>Placement Cell</td>
+
+<td>PDF</td>
+
+<td>
+
+<button class="viewBtn">
+
+View
+
+</button>
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>02 Jul 2026</td>
+
+<td>Scholarship</td>
+
+<td>Scholarship Verification Notice</td>
+
+<td>Administration</td>
+
+<td>PDF</td>
+
+<td>
+
+<button class="viewBtn">
+
+View
+
+</button>
+
+</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</section>
+<!-- ================= Notice Dashboard ================= -->
+
+<section class="dashboard-grid">
+
+    <!-- Important Notices -->
+
+    <div class="box">
+
+        <h2>
+            <i class="fas fa-thumbtack"></i>
+            Important Notices
+        </h2>
+
+        <div class="notice-card important">
+
+            <h3>Semester Examination</h3>
+
+            <p>
+                Semester examinations will begin from
+                <strong>25 July 2026</strong>.
+            </p>
+
+            <span class="date">
+                Posted : 15 Jul 2026
+            </span>
+
+        </div>
+
+        <div class="notice-card">
+
+            <h3>Placement Registration</h3>
+
+            <p>
+                Final year students should complete
+                placement registration before
+                <strong>20 July 2026</strong>.
+            </p>
+
+            <span class="date">
+                Posted : 10 Jul 2026
+            </span>
+
+        </div>
+
+        <div class="notice-card">
+
+            <h3>Scholarship Verification</h3>
+
+            <p>
+                Submit all scholarship documents in the
+                Administration Office before the deadline.
+            </p>
+
+            <span class="date">
+                Posted : 05 Jul 2026
+            </span>
+
+        </div>
+
+    </div>
+
+    <!-- Upcoming Events -->
+
+    <div class="box">
+
+        <h2>
+
+            <i class="fas fa-calendar-days"></i>
+
+            Upcoming Events
+
+        </h2>
+
+        <ul class="event-list">
+
+            <li>
+
+                <strong>18 Jul</strong>
+
+                Technical Workshop
+
+            </li>
+
+            <li>
+
+                <strong>20 Jul</strong>
+
+                Placement Training
+
+            </li>
+
+            <li>
+
+                <strong>25 Jul</strong>
+
+                Semester Examination
+
+            </li>
+
+            <li>
+
+                <strong>01 Aug</strong>
+
+                Sports Competition
+
+            </li>
+
+            <li>
+
+                <strong>10 Aug</strong>
+
+                Project Presentation
+
+            </li>
+
+        </ul>
+
+    </div>
+
+</section>
+
+<!-- ================= Notice Categories ================= -->
+
+<section class="table-box">
+
+<h2>
+
+<i class="fas fa-folder-open"></i>
+
+Notice Categories
+
+</h2>
+
+<div class="category-container">
+
+<div class="category-card">
+
+<i class="fas fa-book"></i>
+
+<h3>Academic</h3>
+
+<p>4 Notices</p>
+
+</div>
+
+<div class="category-card">
+
+<i class="fas fa-briefcase"></i>
+
+<h3>Placement</h3>
+
+<p>2 Notices</p>
+
+</div>
+
+<div class="category-card">
+
+<i class="fas fa-calendar"></i>
+
+<h3>Events</h3>
+
+<p>3 Notices</p>
+
+</div>
+
+<div class="category-card">
+
+<i class="fas fa-money-check-dollar"></i>
+
+<h3>Scholarship</h3>
+
+<p>3 Notices</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= Notice Modal ================= -->
+
+<div class="modal" id="noticeModal">
+
+<div class="modal-content">
+
+<span class="close">&times;</span>
+
+<h2>Notice Details</h2>
+
+<p>
+
+Semester Examination Schedule has been published.
+
+Students are requested to download the official timetable
+and prepare accordingly.
+
+</p>
+
+<button id="downloadNotice">
+
+<i class="fas fa-download"></i>
+
+Download PDF
+
+</button>
+
+</div>
+
+</div>
+
+<!-- ================= Footer ================= -->
+
+<footer class="footer">
+
+<p>
+
+© 2026 Student Management System | Developed by Santosh
+
+</p>
+
+</footer>
+
+</main>
+
+</div>
+
+<script src="/js/student-notices.js"></script>
+
+<script>
+
+if(localStorage.getItem("theme")==="dark"){
+
+document.body.classList.add("dark-mode");
+
+}
+
+</script>
+
+</body>
+
+</html>

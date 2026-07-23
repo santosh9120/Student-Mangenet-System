@@ -1,0 +1,83 @@
+/* Student Management System - style.css */
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+font-family:'Poppins',sans-serif;
+background:linear-gradient(135deg,#0f172a,#1e3a8a,#2563eb);
+color:#fff;overflow-x:hidden}
+a{text-decoration:none}
+.bg-animation{position:fixed;inset:0;overflow:hidden;z-index:-1}
+.bg-animation span{position:absolute;width:180px;height:180px;border-radius:50%;
+background:rgba(255,255,255,.08);animation:float 16s linear infinite}
+.bg-animation span:nth-child(1){left:5%;top:10%}
+.bg-animation span:nth-child(2){left:75%;top:20%;width:120px;height:120px}
+.bg-animation span:nth-child(3){left:25%;top:65%}
+.bg-animation span:nth-child(4){left:85%;top:75%}
+.bg-animation span:nth-child(5){left:50%;top:40%;width:90px;height:90px}
+@keyframes float{0%{transform:translateY(0) rotate(0)}50%{transform:translateY(-40px) rotate(180deg)}100%{transform:translateY(0) rotate(360deg)}}
+
+header{display:flex;justify-content:space-between;align-items:center;padding:18px 8%;
+position:sticky;top:0;background:rgba(255,255,255,.08);backdrop-filter:blur(12px)}
+.logo{display:flex;align-items:center;gap:10px;font-size:1.5rem;font-weight:700}
+.logo i{color:#ffd54f}
+nav{display:flex;gap:28px}
+nav a{color:#fff;font-weight:500;transition:.3s}
+nav a:hover{color:#ffd54f}
+.nav-buttons{display:flex;gap:12px}
+.login-btn,.register-btn,.primary-btn,.secondary-btn,.cta a{
+padding:12px 22px;border-radius:30px;font-weight:600;transition:.3s;display:inline-block}
+.login-btn,.secondary-btn{border:2px solid #fff;color:#fff}
+.register-btn,.primary-btn,.cta a{background:#ffd54f;color:#111}
+.login-btn:hover,.secondary-btn:hover{background:#fff;color:#111}
+.register-btn:hover,.primary-btn:hover,.cta a:hover{transform:translateY(-3px)}
+
+.hero{min-height:90vh;display:grid;grid-template-columns:1fr 1fr;align-items:center;
+padding:60px 8%;gap:50px}
+.hero h4{letter-spacing:3px;color:#ffd54f}
+.hero h1{font-size:4rem;line-height:1.1;margin:15px 0}
+.hero h1 span{color:#ffd54f}
+.hero p{font-size:1.1rem;color:#e5e7eb;line-height:1.8;max-width:600px}
+.hero-buttons{margin-top:30px;display:flex;gap:18px}
+
+.dashboard-card{background:rgba(255,255,255,.12);backdrop-filter:blur(18px);
+padding:30px;border-radius:20px;box-shadow:0 20px 50px rgba(0,0,0,.3)}
+.dashboard-header{display:flex;justify-content:space-between;margin-bottom:25px}
+.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.stat{background:rgba(255,255,255,.08);padding:20px;border-radius:15px;text-align:center}
+.stat i{font-size:2rem;color:#ffd54f;margin-bottom:10px}
+.stat h2{margin:8px 0}
+
+.features{padding:80px 8%;text-align:center}
+.features h2,.about h2,.cta h2{font-size:2.5rem;margin-bottom:15px}
+.section-text{color:#dbeafe;margin-bottom:35px}
+.feature-container{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:25px}
+.feature-card{background:rgba(255,255,255,.1);padding:35px 25px;border-radius:20px;
+backdrop-filter:blur(15px);transition:.35s}
+.feature-card:hover{transform:translateY(-10px)}
+.feature-card i{font-size:2.5rem;color:#ffd54f;margin-bottom:15px}
+.feature-card p{color:#e5e7eb;line-height:1.7}
+
+.statistics{padding:70px 8%;display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:25px}
+.box{background:rgba(255,255,255,.1);padding:35px;border-radius:20px;text-align:center}
+.box h1{font-size:2.5rem;color:#ffd54f}
+
+.about{padding:80px 8%;text-align:center}
+.about p{max-width:900px;margin:20px auto 35px;line-height:1.9;color:#e5e7eb}
+
+.cta{padding:90px 8%;text-align:center}
+.cta p{margin:18px 0 30px;color:#dbeafe}
+
+footer{background:#07111f;padding:40px 8%;text-align:center}
+.social-icons{margin:20px 0}
+.social-icons a{display:inline-flex;width:45px;height:45px;border-radius:50%;
+align-items:center;justify-content:center;background:#1e293b;color:#fff;margin:0 8px}
+.social-icons a:hover{background:#ffd54f;color:#111}
+hr{margin:25px 0;border-color:#334155}
+
+@media(max-width:900px){
+header{flex-direction:column;gap:15px}
+nav{flex-wrap:wrap;justify-content:center}
+.hero{grid-template-columns:1fr;text-align:center}
+.hero p{margin:auto}
+.hero-buttons{justify-content:center}
+.hero h1{font-size:2.8rem}
+}

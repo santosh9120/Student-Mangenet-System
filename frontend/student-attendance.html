@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Attendance | Student Management System</title>
+
+<link rel="stylesheet" href="css/student-attendance.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<!-- Sidebar -->
+
+<aside class="sidebar">
+
+<div class="logo">
+
+<i class="fas fa-user-graduate"></i>
+
+<h2>Student</h2>
+
+</div>
+
+<ul>
+
+<li>
+
+<a href="student-dashboard.html">
+
+<i class="fas fa-house"></i>
+
+Dashboard
+
+</a>
+
+</li>
+
+<li>
+
+<a href="student-profile.html">
+
+<i class="fas fa-user"></i>
+
+My Profile
+
+</a>
+
+</li>
+
+<li>
+
+<a href="student-courses.html">
+
+<i class="fas fa-book"></i>
+
+My Courses
+
+</a>
+
+</li>
+
+<li class="active">
+
+<a href="student-attendance.html">
+
+<i class="fas fa-calendar-check"></i>
+
+Attendance
+
+</a>
+
+</li>
+
+<li>
+
+<a href="student-results.html">
+
+<i class="fas fa-chart-line"></i>
+
+Results
+
+</a>
+
+</li>
+
+<li>
+
+<a href="student-notices.html">
+
+<i class="fas fa-bell"></i>
+
+Notices
+
+</a>
+
+</li>
+
+<li>
+
+<a href="student-settings.html">
+
+<i class="fas fa-cog"></i>
+
+Settings
+
+</a>
+
+</li>
+
+<li>
+
+<a href="login.html" id="logout">
+
+<i class="fas fa-sign-out-alt"></i>
+
+Logout
+
+</a>
+
+</li>
+
+</ul>
+
+</aside>
+
+<!-- Main -->
+
+<main class="main">
+
+<header class="topbar">
+
+<div>
+
+<h1>Attendance</h1>
+
+<p>Your attendance records</p>
+
+</div>
+
+<div class="top-right">
+
+<input
+type="text"
+id="searchAttendance"
+placeholder="Search Subject">
+
+<div id="clock"></div>
+
+</div>
+
+</header>
+
+<!-- Cards -->
+
+<section class="cards">
+
+<div class="card">
+
+<i class="fas fa-calendar-check"></i>
+
+<h2>92%</h2>
+
+<p>Overall Attendance</p>
+
+</div>
+
+<div class="card">
+
+<i class="fas fa-check-circle"></i>
+
+<h2>184</h2>
+
+<p>Present</p>
+
+</div>
+
+<div class="card">
+
+<i class="fas fa-times-circle"></i>
+
+<h2>16</h2>
+
+<p>Absent</p>
+
+</div>
+
+<div class="card">
+
+<i class="fas fa-book-reader"></i>
+
+<h2>8</h2>
+
+<p>Subjects</p>
+
+</div>
+
+</section>
+
+<!-- Attendance Table -->
+
+<section class="table-box">
+
+<h2>
+
+<i class="fas fa-table"></i>
+
+Subject Attendance
+
+</h2>
+
+<table id="attendanceTable">
+
+<thead>
+
+<tr>
+
+<th>Subject</th>
+
+<th>Total</th>
+
+<th>Present</th>
+
+<th>Absent</th>
+
+<th>Percentage</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Java Programming</td>
+
+<td>40</td>
+
+<td>38</td>
+
+<td>2</td>
+
+<td>95%</td>
+
+</tr>
+
+<tr>
+
+<td>DBMS</td>
+
+<td>35</td>
+
+<td>33</td>
+
+<td>2</td>
+
+<td>94%</td>
+
+</tr>
+
+<tr>
+
+<td>Operating System</td>
+
+<td>30</td>
+
+<td>27</td>
+
+<td>3</td>
+
+<td>90%</td>
+
+</tr>
+
+<tr>
+
+<td>Computer Networks</td>
+
+<td>32</td>
+
+<td>30</td>
+
+<td>2</td>
+
+<td>94%</td>
+
+</tr>
+
+<tr>
+
+<td>Software Engineering</td>
+
+<td>28</td>
+
+<td>25</td>
+
+<td>3</td>
+
+<td>89%</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</section>
+<!-- ================= Dashboard Grid ================= -->
+
+<section class="dashboard-grid">
+
+    <!-- Attendance Chart -->
+
+    <div class="box">
+
+        <h2>
+            <i class="fas fa-chart-pie"></i>
+            Attendance Overview
+        </h2>
+
+        <canvas id="attendanceChart"></canvas>
+
+    </div>
+
+    <!-- Attendance Progress -->
+
+    <div class="box">
+
+        <h2>
+            <i class="fas fa-chart-line"></i>
+            Attendance Progress
+        </h2>
+
+        <div class="progress-item">
+
+            <p>Java Programming</p>
+
+            <div class="progress">
+                <div class="progress-bar" style="width:95%;">95%</div>
+            </div>
+
+        </div>
+
+        <div class="progress-item">
+
+            <p>Database Management System</p>
+
+            <div class="progress">
+                <div class="progress-bar" style="width:94%;">94%</div>
+            </div>
+
+        </div>
+
+        <div class="progress-item">
+
+            <p>Operating System</p>
+
+            <div class="progress">
+                <div class="progress-bar" style="width:90%;">90%</div>
+            </div>
+
+        </div>
+
+        <div class="progress-item">
+
+            <p>Computer Networks</p>
+
+            <div class="progress">
+                <div class="progress-bar" style="width:94%;">94%</div>
+            </div>
+
+        </div>
+
+        <div class="progress-item">
+
+            <p>Software Engineering</p>
+
+            <div class="progress">
+                <div class="progress-bar" style="width:89%;">89%</div>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= Monthly Attendance ================= -->
+
+<section class="table-box">
+
+    <h2>
+        <i class="fas fa-calendar-alt"></i>
+        Monthly Attendance Summary
+    </h2>
+
+    <table>
+
+        <thead>
+
+        <tr>
+
+            <th>Month</th>
+            <th>Classes</th>
+            <th>Present</th>
+            <th>Absent</th>
+            <th>Percentage</th>
+
+        </tr>
+
+        </thead>
+
+        <tbody>
+
+        <tr>
+            <td>January</td>
+            <td>22</td>
+            <td>21</td>
+            <td>1</td>
+            <td>95%</td>
+        </tr>
+
+        <tr>
+            <td>February</td>
+            <td>24</td>
+            <td>22</td>
+            <td>2</td>
+            <td>92%</td>
+        </tr>
+
+        <tr>
+            <td>March</td>
+            <td>26</td>
+            <td>24</td>
+            <td>2</td>
+            <td>92%</td>
+        </tr>
+
+        <tr>
+            <td>April</td>
+            <td>25</td>
+            <td>23</td>
+            <td>2</td>
+            <td>92%</td>
+        </tr>
+
+        <tr>
+            <td>May</td>
+            <td>20</td>
+            <td>19</td>
+            <td>1</td>
+            <td>95%</td>
+        </tr>
+
+        </tbody>
+
+    </table>
+
+</section>
+
+<!-- ================= Attendance Rules ================= -->
+
+<section class="box">
+
+    <h2>
+        <i class="fas fa-circle-info"></i>
+        Attendance Rules
+    </h2>
+
+    <ul class="rules">
+
+        <li>Minimum attendance required is <strong>75%</strong>.</li>
+
+        <li>Students below 75% attendance may not be eligible for examinations.</li>
+
+        <li>Medical leave must be approved by the department.</li>
+
+        <li>Attendance records are updated daily.</li>
+
+        <li>Contact your class coordinator for any attendance discrepancies.</li>
+
+    </ul>
+
+</section>
+
+<!-- ================= Footer ================= -->
+
+<footer class="footer">
+
+    <p>
+        © 2026 Student Management System | Developed by Santosh
+    </p>
+
+</footer>
+
+</main>
+
+</div>
+
+<script src="/js/student-attendance.js"></script>
+
+<script>
+
+if(localStorage.getItem("theme")==="dark"){
+
+    document.body.classList.add("dark-mode");
+
+}
+
+</script>
+
+
+</body>
+</html>
