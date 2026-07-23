@@ -2,7 +2,7 @@
 // Department Management JavaScript
 // ==========================================
 
-const API_URL = "http://localhost:5000/api/departments";
+const API_URL = "https://student-mangenet-system.onrender.com/api/departments";
 
 const departmentTable = document.getElementById("departmentTable");
 const departmentForm = document.getElementById("departmentForm");

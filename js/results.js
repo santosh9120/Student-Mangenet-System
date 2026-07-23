@@ -2,7 +2,7 @@
 // Results Management JavaScript
 // ==========================================
 
-const API_URL = "http://localhost:5000/api/results";
+const API_URL = "https://student-mangenet-system.onrender.com/api/results";
 
 const resultTable = document.getElementById("resultTable");
 const resultForm = document.getElementById("resultForm");

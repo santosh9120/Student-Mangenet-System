@@ -2,7 +2,7 @@
 // Notice Management JavaScript
 // ==========================================
 
-const API_URL = "http://localhost:5000/api/notices";
+const API_URL = "https://student-mangenet-system.onrender.com/api/notices";
 
 const noticeTable = document.getElementById("noticeTable");
 const noticeForm = document.getElementById("noticeForm");

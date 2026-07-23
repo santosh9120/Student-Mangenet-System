@@ -2,7 +2,7 @@
 // Attendance Management JavaScript
 // ==========================================
 
-const API_URL = "http://localhost:5000/api/attendance";
+const API_URL = "https://student-mangenet-system.onrender.com/api/attendance";
 
 const attendanceTable = document.getElementById("attendanceTable");
 const attendanceForm = document.getElementById("attendanceForm");

@@ -598,7 +598,7 @@ function showToast(message, color = "#16a34a") {
 // Dashboard API Integration
 // ==========================================
 
-const API = "http://localhost:5000/api/admin/dashboard";
+const API = "https://student-mangenet-system.onrender.com/api/admin/dashboard";
 
 async function loadDashboard() {
 

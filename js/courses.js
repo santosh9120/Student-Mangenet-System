@@ -2,7 +2,7 @@
 // Course Management JavaScript
 // ==========================================
 
-const API_URL = "http://localhost:5000/api/courses";
+const API_URL = "https://student-mangenet-system.onrender.com/api/courses";
 
 const courseTable = document.getElementById("courseTable");
 const courseForm = document.getElementById("courseForm");

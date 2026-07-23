@@ -3,7 +3,7 @@
 // File: js/profile.js
 // ==========================================
 
-const API_URL = "http://localhost:5000/api";
+const API_URL = "https://student-mangenet-system.onrender.com/api";
 
 // ===============================
 // Check Login

@@ -2,7 +2,7 @@
 // Teacher Management JavaScript
 // ==========================================
 
-const API_URL = "http://localhost:5000/api/teachers";
+const API_URL = "https://student-mangenet-system.onrender.com/api/teachers";
 
 const teacherTable = document.getElementById("teacherTable");
 const teacherForm = document.getElementById("teacherForm");

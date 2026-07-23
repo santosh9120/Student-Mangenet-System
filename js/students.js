@@ -10,7 +10,7 @@ console.log("students.js loaded");
 // API URL
 // ==========================================
 
-const API_URL = "http://localhost:5000/api/students";
+const API_URL = "https://student-mangenet-system.onrender.com/api/students";
 
 // ==========================================
 // Elements
